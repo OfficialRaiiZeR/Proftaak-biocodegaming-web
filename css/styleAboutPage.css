@@ -1,0 +1,32 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  opacity: 1;
+    transition: 1s opacity;
+
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.jumbotron {
+	background-image: url('../images/biocode logo black dirty.png');
+    height: 100vh;
+    background-size: 1520px 800px;
+
+}
+
+.headerText {
+    color: white;
+}
+
+.maintext {
+	color: white;
+}
