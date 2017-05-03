@@ -1,0 +1,71 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  opacity: 1;
+    transition: 1s opacity;
+
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.jumbotron {
+	background-image: url('../images/pattern-wallpaper-17.jpg');
+
+}
+
+.jumbotronAppPage {
+	background-image: url('../images/pattern-wallpaper-17.jpg');
+	height: 100vh;
+}
+
+.navbar-brand {
+	transition: 0.2s ease;
+}
+
+.navbar-brand:hover {
+	transform: scale(1.1, 1.1);
+}
+
+.maintext {
+	color: white;
+}
+
+.btn {
+	transition: 0.2s ease;
+}
+
+.btn2 {
+	transition: 0.2s ease;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;

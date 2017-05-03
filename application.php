@@ -18,7 +18,7 @@
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleApplicationPage.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -66,7 +66,7 @@
         <h1>Welcome to biocodegaming</h1>
        
         <p><a class="btn btn-primary btn-lg" href="application.php" role="button">Learn more &raquo;</a></p>
-      </div>
+        
     </div>
 
       <hr>
@@ -75,6 +75,8 @@
         <p>&copy; 2015 BioCodeGaming, Inc.</p>
       </footer>
     </div> <!-- /container -->
+
+      </div>
 
 
     <!-- Bootstrap core JavaScript
