@@ -53,8 +53,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
             
-            <button type="submit" class="btn btn-success">Sign in</button>
-            <button type="submit" class="btn btn-success">Create account</button>
+            <button type="submit" class="btn btn-success" href="login.php">Sign in</button>
+            <button type="submit" class="btn btn-success" href="registration.php">Create account</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
