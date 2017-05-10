@@ -48,14 +48,13 @@
           <a class="navbar-brand" href="about.html">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
           <a class="navbar-brand" href="contact.html">contact</a>
-          <a class="navbar-brand" href="contact.php">support</a>
+          <a class="navbar-brand" href="support.php">support</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
             
-            
-            <button type="submit" class="btn btn-success">Sign in</button>
-            <button type="submit" class="btn btn-success">Create account</button>
+            <a class="btn btn-success" href="login.php">Sign in</a>
+            <a class="btn btn-success" href="registration.php">Create account</a>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -123,6 +122,17 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

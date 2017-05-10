@@ -18,7 +18,7 @@
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/styleContactPage.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -32,7 +32,6 @@
   </head>
 
   <body>
-  <!-- this creates the fade in effect on the pages -->
   <script>document.body.className += ' fade-out';</script>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -44,54 +43,36 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- een branch van dit maken als tijd over is -->
+          <!-- een branch van dit aken als tijd over is -->
           <a class="navbar-brand" href="index.html">home</a>
           <a class="navbar-brand" href="about.html">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
           <a class="navbar-brand" href="contact.html">contact</a>
-          <a class="navbar-brand" href="contact.php">support</a>
+          <a class="navbar-brand" href="support.php">support</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
             
             
-           <button type="submit" class="btn btn-success" href="login.php">Sign in</button>
+            <button type="submit" class="btn btn-success" href="login.php">Sign in</button>
             <button type="submit" class="btn btn-success" href="registration.php">Create account</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
+    <!-- make a slider from jumbotron -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to biocodegaming</h1>
+        <p class="maintext">This is BioCodeGaming, the Number 1 platfrom for all your community stuff and gaming servers. We also have a installable application from this website where you will have the same functionality</p>
+        <p><a class="btn btn-primary btn-lg" href="application.php" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
     <div class="container">
     <h1>Latest news and releases</h1>
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>buisness contact</h2>
-          <p>if you like to work with us contct us here</p>
-          <p>state: Ntherlands</p>
-          <p>Street: Somerenbraaklan 28</p>
-          <p>number: 0614141414</p>
-          <p>Email: buissnessemail@email.com</p>
-        </div>
-        <div class="col-md-4">
-          <h2>buisness contact</h2>
-          <p>if you like to work with us contct us here</p>
-          <p>state: Ntherlands</p>
-          <p>Street: Somerenbraaklan 28</p>
-          <p>number: 0614141414</p>
-          <p>Email: buissnessemail@email.com</p>
-        </div>
-        <div class="col-md-4">
-          <h2>buisness contact</h2>
-          <p>if you like to work with us contct us here</p>
-          <p>state: Ntherlands</p>
-          <p>Street: Somerenbraaklan 28</p>
-          <p>number: 0614141414</p>
-          <p>Email: buissnessemail@email.com</p>
-        </div>
 
-      </div>
 
       <hr>
 
