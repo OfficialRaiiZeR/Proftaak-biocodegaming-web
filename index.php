@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +49,7 @@
             <span class="icon-bar"></span>
           </button>
           <!-- een branch van dit aken als tijd over is -->
-          <a class="navbar-brand" href="index.html">home</a>
+          <a class="navbar-brand" href="index.php">home</a>
           <a class="navbar-brand" href="about.html">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
           <a class="navbar-brand" href="contact.html">contact</a>
@@ -52,9 +57,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
-            
+            <?php 
+            require_once("inc/logoutButton.php");
+            ?>
             <a class="btn btn-success" href="login.php">Sign in</a>
             <a class="btn btn-success" href="registration.php">Create account</a>
+        
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -68,7 +76,6 @@
         <p><a class="btn btn-primary btn-lg" href="application.php" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
-
     <div class="container">
     <h1>Latest news and releases</h1>
       <!-- Example row of columns -->
