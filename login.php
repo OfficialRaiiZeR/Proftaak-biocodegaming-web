@@ -25,16 +25,11 @@ if (isset($_POST['mylogin'])) {
 
   printf("Result set has %d rows.\n",$rowcount);
 
-  echo "<pre>";
-  var_dump($user);
-  echo "<pre>";
-//die($loginQuery);
-
 
 
   if ($_POST['username'] == $username && $_POST['password'] == $password) {
     $_SESSION['userlogedin'] = true;
-    header("location:index.php");
+    header("location:login.php");
   }
   # code...
 }
@@ -43,12 +38,6 @@ if (isset($_POST['mylogout'])) {
   $_SESSION['userlogedin'] = false;
   header("location:index.php");
 }
-
-// echo "<pre>";
-// var_dump($connect);
-// echo "</pre>";
-//var_dump($_POST);
-//var_dump($connect);
 
  ?>
 
@@ -109,8 +98,8 @@ if (isset($_POST['mylogout'])) {
           <form class="navbar-form navbar-right">
             
             
-            <button type="submit" class="btn btn-success" href="login.php">Sign in</button>
-            <button type="submit" class="btn btn-success" href="registration.php">Create account</button>
+            <a class="btn btn-success" href="login.php">Sign in</a>
+            <a class="btn btn-success" href="registration.php">Create account</a>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -120,6 +109,7 @@ if (isset($_POST['mylogout'])) {
     <h1>login</h1>
       <!-- Example row of columns -->
       <div class="row">
+        <div class="col-md-4">
        <?php 
         if ($_SESSION['userlogedin'] == true) {
           ?>
@@ -135,21 +125,27 @@ if (isset($_POST['mylogout'])) {
           ?>
           <form action="index.php" method="POST">
             <fieldset>
+        </div>
+        <div class="col-md-4">
               <label>
                 username
               </label>
+              <br>
               <input type="text" name="username">
+              <br>
               <label>
                 password
               </label>
+              <br>
               <input type="password" name="password">
+              <br>
               <input type="submit" name="mylogin" value="login">
             </fieldset>
+        </div>
           </form>
           <?php
         }
        ?>
-
       </div>
 
       <hr>
