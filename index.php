@@ -25,15 +25,9 @@ session_start();
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- Just for debugging purposes -->
     <script src="js/ie-emulation-modes-warning.js"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -58,6 +52,9 @@ session_start();
           <form class="navbar-form navbar-right">
             <a class="btn btn-success" href="login.php">Sign in</a>
             <a class="btn btn-success" href="registration.php">Create account</a>
+            <?php 
+              require_once("inc/logoutButton.php");
+            ?>
           </form>
         </div>
       </div>
@@ -73,7 +70,6 @@ session_start();
     </div>
     <div class="container">
     <h1>Latest news and releases</h1>
-      <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
           <h2>join our steam group!</h2>
@@ -111,7 +107,14 @@ session_start();
       <hr>
 
       <footer>
-        <p>&copy; 2015 BioCodeGaming, Inc.</p>
+        <p>&copy; 2015 BioCodeGaming, Inc.
+          <img src="images/icons/twitter bold.png" alt="support" width="75" height="75">
+          <img src="images/icons/facebook bold.png" alt="support" width="75" height="75">
+          <img src="images/icons/instagram bold.png" alt="support" width="75" height="75">
+          <img src="images/icons/youtube bold.png" alt="support" width="75" height="75">
+
+        </p>
+
       </footer>
     </div>
 
