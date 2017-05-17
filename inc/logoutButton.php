@@ -19,11 +19,11 @@ else
 			<label>
 				username
 			</label>
-			<input type="text" name="username">
+			<input class="form-control" type="text" placeholder="username" name="username">
 			<label>
 				password
 			</label>
-			<input type="password" name="password">
+			<input type="password" name="password" placeholder="Password" class="form-control">
 			<input type="submit" name="mylogin" value="login">
 		</fieldset>
 	</form>

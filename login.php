@@ -88,7 +88,7 @@ if (isset($_POST['mylogout'])) {
             <span class="icon-bar"></span>
           </button>
           <!-- een branch van dit aken als tijd over is -->
-          <a class="navbar-brand" href="index.html">home</a>
+          <a class="navbar-brand" href="index.php">home</a>
           <a class="navbar-brand" href="about.html">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
           <a class="navbar-brand" href="contact.html">contact</a>
@@ -131,21 +131,21 @@ if (isset($_POST['mylogout'])) {
                 username
               </label>
               <br>
-              <input type="text" name="username">
+              <input type="text" name="username" class="form-control" placeholder="username">
               <br>
               <label>
                 password
               </label>
               <br>
-              <input type="password" name="password">
+              <input type="password" name="password" placeholder="Password" class="form-control">
               <br>
               <input type="submit" name="mylogin" value="login">
             </fieldset>
         </div>
           </form>
           <?php
-        }
-       ?>
+          }
+           ?>
       </div>
 
       <hr>

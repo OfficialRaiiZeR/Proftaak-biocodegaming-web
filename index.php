@@ -38,7 +38,6 @@ session_start();
 
   <body>
   <script>document.body.className += ' fade-out';</script>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -48,7 +47,7 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- een branch van dit aken als tijd over is -->
+          <!-- een branch van dit maken als tijd over is -->
           <a class="navbar-brand" href="index.php">home</a>
           <a class="navbar-brand" href="about.html">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
@@ -57,18 +56,14 @@ session_start();
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
-            <?php 
-            require_once("inc/logoutButton.php");
-            ?>
             <a class="btn btn-success" href="login.php">Sign in</a>
             <a class="btn btn-success" href="registration.php">Create account</a>
-        
           </form>
-        </div><!--/.navbar-collapse -->
+        </div>
       </div>
     </nav>
 
-    <!-- make a slider from jumbotron -->
+
     <div class="jumbotron">
       <div class="container">
         <h1>Welcome to biocodegaming</h1>
@@ -118,12 +113,10 @@ session_start();
       <footer>
         <p>&copy; 2015 BioCodeGaming, Inc.</p>
       </footer>
-    </div> <!-- /container -->
+    </div>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- ================================================== Bootstrap core JavaScript ================================================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../../dist/js/bootstrap.min.js"></script>

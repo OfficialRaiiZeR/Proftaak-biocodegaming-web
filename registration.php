@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +49,7 @@
             <span class="icon-bar"></span>
           </button>
           <!-- een branch van dit aken als tijd over is -->
-          <a class="navbar-brand" href="index.html">home</a>
+          <a class="navbar-brand" href="index.php">home</a>
           <a class="navbar-brand" href="about.html">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
           <a class="navbar-brand" href="contact.html">contact</a>
@@ -61,12 +66,74 @@
       </div>
     </nav>
 
-    <div class="container">
-    <h1>Latest news and releases</h1>
-      <!-- Example row of columns -->
-      <div class="row">
+   <div class="container">
+    <h1>login</h1>
 
+      <div class="row">
+        <div class="col-md-4">
+       <?php 
+        if ($_SESSION['userlogedin'] == true) {
+          ?>
+          <form action="index.php" method="POST">
+            <fieldset>
+              <input type="submit" name="mylogout" value="logout">
+            </fieldset>
+          </form>
+          <?php
+        }
+        else
+        {
+          ?>
+          <form action="index.php" method="POST">
+            <fieldset>
+        </div>
+        <div class="col-md-4">
+              <label>
+                username
+              </label>
+              <br>
+              <input type="text" name="username" class="form-control" placeholder="username">
+              <br>
+              <label>
+                first name
+              </label>
+              <br>
+              <input type="text" name="username" class="form-control" placeholder="username">
+              <br>
+              <label>
+                surname
+              </label>
+              <br>
+              <input type="text" name="username" class="form-control" placeholder="username">
+              <br>
+              <label>
+                email
+              </label>
+              <br>
+              <input type="text" name="username" class="form-control" placeholder="username">
+              <br>
+              <label>
+                password
+              </label>
+              
+              <input type="password" name="password" placeholder="Password" class="form-control">
+              <label>
+                verify password
+              </label>
+              
+              <input type="password" name="password" placeholder="Password" class="form-control">
+              <br>
+              <input type="submit" name="mylogin" value="login" class="login-button">
+
+              <img src="images/logo_biocodegaming.png" alt="album title goes here" width="250" height="250">
+            </fieldset>
+        </div>
+          </form>
+          <?php
+             }
+           ?>
       </div>
+
 
       <hr>
 
@@ -84,17 +151,6 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-    <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

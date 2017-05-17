@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
           </button>
           <!-- een branch van dit aken als tijd over is -->
-          <a class="navbar-brand" href="index.html">home</a>
+          <a class="navbar-brand" href="index.php">home</a>
           <a class="navbar-brand" href="about.html">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
           <a class="navbar-brand" href="contact.html">contact</a>
