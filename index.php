@@ -52,9 +52,9 @@ session_start();
           <form class="navbar-form navbar-right">
             <a class="btn btn-success" href="login.php">Sign in</a>
             <a class="btn btn-success" href="registration.php">Create account</a>
-            <?php 
+            <!-- <?php 
               require_once("inc/logoutButton.php");
-            ?>
+            ?>-->
           </form>
         </div>
       </div>
