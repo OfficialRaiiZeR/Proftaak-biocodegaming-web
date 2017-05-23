@@ -107,11 +107,11 @@ session_start();
       <hr>
 
       <footer>
-        <p>&copy; 2015 BioCodeGaming, Inc.
-          <img src="images/icons/twitter bold.png" alt="support" width="75" height="75">
-          <img src="images/icons/facebook bold.png" alt="support" width="75" height="75">
-          <img src="images/icons/instagram bold.png" alt="support" width="75" height="75">
-          <img src="images/icons/youtube bold.png" alt="support" width="75" height="75">
+        <p>&copy; 2015 - 2017 BioCodeGaming, Inc.
+          <img src="images/icons/twitter bold.png" alt="support" width="50" height="50">
+          <img src="images/icons/facebook bold.png" alt="support" width="50" height="50">
+          <img src="images/icons/instagram bold.png" alt="support" width="50" height="50">
+          <img src="images/icons/youtube bold.png" alt="support" width="50" height="50">
 
         </p>
 
@@ -119,22 +119,13 @@ session_start();
     </div>
 
 
-    <!-- ================================================== Bootstrap core JavaScript ================================================== -->
+    <!-- ================================================== core JavaScript ================================================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
 </script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
