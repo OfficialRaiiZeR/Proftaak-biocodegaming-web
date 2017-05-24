@@ -1,6 +1,28 @@
 <?php
 session_start();
 
+include("inc/functions.php");
+
+$biocode = array();
+
+if (mysqli_connect_errno()) {
+  printf("connection failed: %\n", mysql_connect_error());
+}
+
+if (isset($_POST['submit'])) {
+
+  $firstname = $_POST['firstname'];
+  $insertion = $_POST['insertion'];
+  $lastname = $_POST['lastname'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $confirmPassword = $_POST['confirmPassword'];
+}
+
+  // !!!deze insert nog aanpasen, het is de oude nog van guestbook. database is namelijk nog niet klaar!!!
+  $insertDataQuery = " INSERT INTO `biocode`.`guests` (`guestbookId`, `firstname`, `insertion`, `surname`, `emailAddress`, `message`, `ipAdddress`, `timefInsert`) VALUES (NULL, '$firstname', '$insertion', '$surname', '$email', '$message', '', CURRENT_DATE())";
+
+    mysqli_query($connect, $insertDataQuery);
 ?>
 
 <!DOCTYPE html>
@@ -92,36 +114,36 @@ session_start();
                 username
               </label>
               <br>
-              <input type="text" name="username" class="form-control" placeholder="username">
+              <input type="text" name="firstname" class="form-control" placeholder="username" value="" required>
               <br>
               <label>
                 first name
               </label>
               <br>
-              <input type="text" name="username" class="form-control" placeholder="username">
+              <input type="text" name="insertion" class="form-control" placeholder="username" value="">
               <br>
               <label>
                 surname
               </label>
               <br>
-              <input type="text" name="username" class="form-control" placeholder="username">
+              <input type="text" name="lastname" class="form-control" placeholder="username" value="" required>
               <br>
               <label>
                 email
               </label>
               <br>
-              <input type="text" name="username" class="form-control" placeholder="username">
+              <input type="text" name="email" class="form-control" placeholder="username" value="" required>
               <br>
               <label>
                 password
               </label>
               
-              <input type="password" name="password" placeholder="Password" class="form-control">
+              <input type="password" name="password" placeholder="Password" class="form-control" value="" required>
               <label>
                 verify password
               </label>
               
-              <input type="password" name="password" placeholder="Password" class="form-control">
+              <input type="password" name="confirmPassword" placeholder="Password" class="form-control">
               <br>
               <input type="submit" name="mylogin" value="login" class="login-button">
 

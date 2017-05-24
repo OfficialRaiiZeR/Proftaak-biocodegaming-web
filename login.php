@@ -123,9 +123,10 @@ if (isset($_POST['mylogout'])) {
         else
         {
           ?>
-          <form action="index.php" method="POST">
-            <fieldset>
+       
         </div>
+        <form action="index.php" method="POST">
+            <fieldset>
         <div class="col-md-4">
               <label>
                 username
