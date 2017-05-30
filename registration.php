@@ -11,6 +11,7 @@ if (mysqli_connect_errno()) {
 
 if (isset($_POST['submit'])) {
 
+  $firstname = $_POST['username'];
   $firstname = $_POST['firstname'];
   $insertion = $_POST['insertion'];
   $lastname = $_POST['lastname'];
@@ -114,15 +115,21 @@ if (isset($_POST['submit'])) {
                 username
               </label>
               <br>
-              <input type="text" name="firstname" class="form-control" placeholder="username" value="" required>
+              <input type="text" name="username" class="form-control" placeholder="username" value="" required>
               <br>
               <label>
                 first name
               </label>
               <br>
-              <input type="text" name="insertion" class="form-control" placeholder="username" value="">
+              <input type="text" name="firstname" class="form-control" placeholder="firstname" value="">
               <br>
               <label>
+              <label>
+                insertion
+              </label>
+              <br>
+              <input type="text" name="insertion" class="form-control" placeholder="insertion" value="" required>
+              <br>
                 surname
               </label>
               <br>
