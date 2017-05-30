@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +26,7 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="zjs/ie-emulation-modes-warning.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -44,11 +48,11 @@
             <span class="icon-bar"></span>
           </button>
           <!-- een branch van dit aken als tijd over is -->
-          <a class="navbar-brand" href="index.php">home</a>
-          <a class="navbar-brand" href="about.html">about</a>
+           <a class="navbar-brand" href="index.php">home</a>
+          <a class="navbar-brand" href="about.php">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
           <a class="navbar-brand" href="contact.php">contact</a>
-          <a class="navbar-brand" href="contact.php">support</a>
+          <a class="navbar-brand" href="support.php">support</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">

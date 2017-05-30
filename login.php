@@ -1,11 +1,15 @@
 <?php 
+session_start();
+
+//session_destroy();
+
+var_dump($_SESSION);
 
 include("inc/functions.php");
 
 $username = "qwer";
 $password = "123";
 $login = array();
-session_start();
 if (!isset($_SESSION['userlogedin'])) {
   $_SESSION['userlogedin'] = false;
 }
@@ -17,32 +21,41 @@ if (isset($_POST['mylogin'])) {
 
   if ($resource = mysqli_query($connect, $loginQuery))
   {
+    $rowcount=mysqli_num_rows($resource);
+    $user=mysqli_fetch_assoc($resource);
+    if($rowcount > 0)
+    {
+      $_SESSION['userlogedin'] = true;
+      header("location:index.php");
+    }
+    else
+    {
+      //header("location:http://www.someweirdwebsite.com");
+    }
     
-
   }
-
-  $rowcount=mysqli_num_rows($result);
-
-  printf("Result set has %d rows.\n",$rowcount);
+}
 
 
+  //printf("Result set has %d rows.\n",$rowcount);
+
+
+/*
 
   if ($_POST['username'] == $username && $_POST['password'] == $password) {
     $_SESSION['userlogedin'] = true;
-    header("location:login.php");
+    header("location:index.php");
   }
+  */
   # code...
-}
+
 
 if (isset($_POST['mylogout'])) {
   $_SESSION['userlogedin'] = false;
   header("location:login.php");
 }
-
  ?>
-
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -88,10 +101,10 @@ if (isset($_POST['mylogout'])) {
             <span class="icon-bar"></span>
           </button>
           <!-- een branch van dit aken als tijd over is -->
-          <a class="navbar-brand" href="index.php">home</a>
-          <a class="navbar-brand" href="about.html">about</a>
+           <a class="navbar-brand" href="index.php">home</a>
+          <a class="navbar-brand" href="about.php">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
-          <a class="navbar-brand" href="contact.html">contact</a>
+          <a class="navbar-brand" href="contact.php">contact</a>
           <a class="navbar-brand" href="support.php">support</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -125,7 +138,7 @@ if (isset($_POST['mylogout'])) {
           ?>
        
         </div>
-        <form action="index.php" method="POST">
+        <form action="login.php" method="POST">
             <fieldset>
         <div class="col-md-4">
               <label>

@@ -25,7 +25,6 @@ if (isset($_POST['submit'])) {
 
     mysqli_query($connect, $insertDataQuery);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -72,10 +71,10 @@ if (isset($_POST['submit'])) {
             <span class="icon-bar"></span>
           </button>
           <!-- een branch van dit aken als tijd over is -->
-          <a class="navbar-brand" href="index.php">home</a>
-          <a class="navbar-brand" href="about.html">about</a>
+           <a class="navbar-brand" href="index.php">home</a>
+          <a class="navbar-brand" href="about.php">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
-          <a class="navbar-brand" href="contact.html">contact</a>
+          <a class="navbar-brand" href="contact.php">contact</a>
           <a class="navbar-brand" href="support.php">support</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">

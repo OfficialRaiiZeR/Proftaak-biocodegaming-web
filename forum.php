@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +22,7 @@
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/styleContactPage.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -46,10 +50,10 @@
           </button>
           <!-- een branch van dit maken als tijd over is -->
           <a class="navbar-brand" href="index.php">home</a>
-          <a class="navbar-brand" href="about.html">about</a>
+          <a class="navbar-brand" href="about.php">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
-          <a class="navbar-brand" href="contact.html">contact</a>
-          <a class="navbar-brand" href="contact.php">support</a>
+          <a class="navbar-brand" href="contact.php">contact</a>
+          <a class="navbar-brand" href="support.php">support</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">

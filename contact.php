@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,11 +49,11 @@
             <span class="icon-bar"></span>
           </button>
           <!-- een branch van dit maken als tijd over is -->
-          <a class="navbar-brand" href="index.php">home</a>
-          <a class="navbar-brand" href="about.html">about</a>
+           <a class="navbar-brand" href="index.php">home</a>
+          <a class="navbar-brand" href="about.php">about</a>
           <a class="navbar-brand" href="forum.php">forum</a>
-          <a class="navbar-brand" href="contact.html">contact</a>
-          <a class="navbar-brand" href="contact.php">support</a>
+          <a class="navbar-brand" href="contact.php">contact</a>
+          <a class="navbar-brand" href="support.php">support</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
