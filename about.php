@@ -48,12 +48,9 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- een branch van dit maken als tijd over is -->
-           <a class="navbar-brand" href="index.php">home</a>
-          <a class="navbar-brand" href="about.php">about</a>
-          <a class="navbar-brand" href="forum.php">forum</a>
-          <a class="navbar-brand" href="contact.php">contact</a>
-          <a class="navbar-brand" href="support.php">support</a>
+          <?php  
+            include("Layout/header.html");
+          ?>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
@@ -69,11 +66,12 @@ session_start();
     <div class="jumbotron">
       <div class="container">
         <h1 class="headerText">Latest news and releases</h1>
-        <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
-
-        </div>
+        
+          <div class="infobox">
+             <h3 class="maintext">biem</h3>
+          </div>
+        
       </div>
 
       <hr>

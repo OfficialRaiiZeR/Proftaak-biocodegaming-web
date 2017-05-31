@@ -19,7 +19,7 @@ session_start();
 
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleSupportPage.css" rel="stylesheet">
 
     <script src="js/ie-emulation-modes-warning.js"></script>
 

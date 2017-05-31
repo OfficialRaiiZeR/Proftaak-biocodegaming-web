@@ -3,7 +3,7 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
   opacity: 1;
-    transition: 1s opacity;
+    transition: 0.1s opacity;
 
 }
 
@@ -29,5 +29,12 @@ body::-webkit-scrollbar {
 
 .maintext {
 	color: white;
+  background-color: ;
+}
+
+.infobox {
+  position: ;
+  width: 1175px;
+  height: 200px;
   background-color: white;
 }
