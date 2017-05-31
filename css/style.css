@@ -18,11 +18,17 @@ body::-webkit-scrollbar {
 
 .jumbotron {
 	background-image: url('../images/pattern-wallpaper-17.jpg');
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .jumbotronAppPage {
 	background-image: url('../images/pattern-wallpaper-17.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 	height: 100vh;
 }
 

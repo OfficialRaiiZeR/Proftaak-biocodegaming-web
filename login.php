@@ -3,7 +3,7 @@ session_start();
 
 //session_destroy();
 
-var_dump($_SESSION);
+//var_dump($_SESSION);
 
 include("inc/functions.php");
 
