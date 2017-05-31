@@ -17,14 +17,16 @@ body::-webkit-scrollbar {
 }
 
 .jumbotron {
-	background-image: url('../images/biocode logo cleanV2.png');
+	background-image: url('../images/pattern yellow.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
     height: 100vh;
-    background-size: 1520px 800px;
 
 }
 
 .headerText {
-    color: white;
+  color: white;
 }
 
 .maintext {
@@ -35,6 +37,6 @@ body::-webkit-scrollbar {
 .infobox {
   position: ;
   width: 1175px;
-  height: 200px;
-  background-color: white;
+  height: 550px;
+  opacity: 0.5;
 }

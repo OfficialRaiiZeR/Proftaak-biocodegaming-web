@@ -56,8 +56,8 @@ session_start();
           <form class="navbar-form navbar-right">
             
             
-           <button type="submit" class="btn btn-success" href="login.php">Sign in</button>
-            <button type="submit" class="btn btn-success" href="registration.php">Create account</button>
+           <a class="btn btn-success" href="login.php">Sign in</a>
+            <a class="btn btn-success" href="registration.php">Create account</a>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -65,11 +65,12 @@ session_start();
 
     <div class="jumbotron">
       <div class="container">
-        <h1 class="headerText">Latest news and releases</h1>
+        <h1 class="headerText">About biocodegaming</h1>
       <div class="row">
         
           <div class="infobox">
-             <h3 class="maintext">biem</h3>
+             <h3 class="maintext">We aare biocodegaming, a community website original from steam. we desided to make a website because de did not like
+             how other community websites operated and just made our own one.</h3>
           </div>
         
       </div>

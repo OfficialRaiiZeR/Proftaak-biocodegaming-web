@@ -79,8 +79,8 @@ if (isset($_POST['submit'])) {
           <form class="navbar-form navbar-right">
             
             
-            <button type="submit" class="btn btn-success" href="login.php">Sign in</button>
-            <button type="submit" class="btn btn-success" href="registration.php">Create account</button>
+            <a class="btn btn-success" href="login.php">Sign in</a>
+            <a class="btn btn-success" href="registration.php">Create account</a>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
