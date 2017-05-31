@@ -9,6 +9,7 @@ $sql="SELECT * FROM $tbl_name ORDER BY id DESC"; // OREDER BY id DESC is order r
 $result=mysql_query($sql);
 ?>
 
+
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
 	<tr>
 		<td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
@@ -33,6 +34,7 @@ $result=mysql_query($sql);
 	<?php
 	// Exit looping and close connection 
 	}
+	
 	mysql_close();
 	?>
 

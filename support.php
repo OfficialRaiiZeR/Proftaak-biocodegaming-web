@@ -1,10 +1,32 @@
 <?php
 session_start();
 
-include("Layout/header.html");
-
 ?>
-  <script>document.body.className += ' fade-out';</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>www.biocodegaming.com</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+  </head>
+
+  <body>
+    <script>document.body.className += ' fade-out';</script>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -15,25 +37,21 @@ include("Layout/header.html");
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- een branch van dit aken als tijd over is -->
-           <a class="navbar-brand" href="index.php">home</a>
-          <a class="navbar-brand" href="about.php">about</a>
-          <a class="navbar-brand" href="forum.php">forum</a>
-          <a class="navbar-brand" href="contact.php">contact</a>
-          <a class="navbar-brand" href="support.php">support</a>
+
+          <?php  
+            include("Layout/header.html");
+          ?>
+
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
-            
-            
             <button type="submit" class="btn btn-success" href="login.php">Sign in</button>
             <button type="submit" class="btn btn-success" href="registration.php">Create account</button>
           </form>
-        </div><!--/.navbar-collapse -->
+        </div>
       </div>
     </nav>
 
-    <!-- make a slider from jumbotron -->
     <div class="jumbotron">
       <div class="container">
         <h1>Welcome to biocodegaming</h1>
@@ -43,15 +61,14 @@ include("Layout/header.html");
     </div>
 
     <div class="container">
-    <h1>Latest news and releases</h1>
-
+      <h1>Latest news and releases</h1>
 
       <hr>
 
       <footer>
         <p>&copy; 2015 BioCodeGaming, Inc.</p>
       </footer>
-    </div> <!-- /container -->
+    </div> 
 
 
     <!-- Bootstrap core JavaScript

@@ -1,38 +1,33 @@
 <?php
-session_start();
 
+include("inc/Function.php");
+
+$tbl_name="forum_question"; 
+
+$sql="SELECT * FROM $tbl_name ORDER BY id DESC"; // OREDER BY id DESC is order result by descending
+
+$result=mysql_query($sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
     <title>www.biocodegaming.com</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -49,30 +44,59 @@ session_start();
             <span class="icon-bar"></span>
           </button>
           <!-- een branch van dit maken als tijd over is -->
-          <a class="navbar-brand" href="index.php">home</a>
-          <a class="navbar-brand" href="about.php">about</a>
-          <a class="navbar-brand" href="forum.php">forum</a>
-          <a class="navbar-brand" href="contact.php">contact</a>
-          <a class="navbar-brand" href="support.php">support</a>
+
+          <?php  
+            include("Layout/header.html");
+          ?>
+
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
-            
-            
-           <button type="submit" class="btn btn-success" href="login.php">Sign in</button>
+            <button type="submit" class="btn btn-success" href="login.php">Sign in</button>
             <button type="submit" class="btn btn-success" href="registration.php">Create account</button>
           </form>
-        </div><!--/.navbar-collapse -->
+        </div>
       </div>
     </nav>
 
     <div class="container">
-    <!-- plaats alles hier in -->
+    
 
-      </div>
+    <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+      <tr>
+        <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
+        <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
+        <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Views</strong></td>
+        <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Replies</strong></td>
+        <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Date/Time</strong></td>
+      </tr>
 
+      <?php
+      // Start looping table row
+      while($rows=mysql_fetch_array($result)){
+      ?>
+      <tr>
+        <td bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
+        <td bgcolor="#FFFFFF"><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['topic']; ?></a><BR></td>
+        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['view']; ?></td>
+        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['reply']; ?></td>
+        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['datetime']; ?></td>
+      </tr>
+
+      <?php
+      // Exit looping and close connection 
+      }
+      
+      mysql_close();
+      ?>
+
+      <tr>
+        <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="create_topic.php"><strong>Create New Topic</strong> </a></td>
+      </tr>
+    </table>
+
+    </div>
       <hr>
-
       <footer>
         <p>&copy; 2015 BioCodeGaming, Inc.</p>
       </footer>
@@ -90,3 +114,6 @@ session_start();
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
+
+
+
