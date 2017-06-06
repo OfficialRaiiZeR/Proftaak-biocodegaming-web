@@ -101,3 +101,9 @@ body::-webkit-scrollbar {
     border-radius: 4px;
     transition: 0.2s ease;
 }
+
+.btn-logout {
+    color: #fff;
+    background-color: #fa8072;
+    border-color: white;
+}
