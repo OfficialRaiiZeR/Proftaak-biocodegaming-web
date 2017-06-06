@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Genereertijd: 06 jun 2017 om 09:47
+-- Genereertijd: 06 jun 2017 om 10:00
 -- Serverversie: 5.6.13
 -- PHP-versie: 5.4.17
 
