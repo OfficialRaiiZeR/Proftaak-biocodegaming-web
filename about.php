@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+
+if (isset($_POST['mylogout'])) 
+{
+  $_SESSION['userlogedin'] = false;
+  header("location:index.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,15 +31,6 @@ session_start();
     <!-- Custom styles for this template -->
     <link href="css/styleAboutPage.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -52,14 +50,41 @@ session_start();
             include("Layout/header.html");
           ?>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            
-            
-           <a class="btn btn-success" href="login.php">Sign in</a>
-            <a class="btn btn-success" href="registration.php">Create account</a>
-          </form>
-        </div><!--/.navbar-collapse -->
+            <?php 
+
+              if ($_SESSION['userlogedin'] == true) 
+              {
+
+            ?>
+
+            <div id="navbar" class="navbar-collapse collapse">
+              <form action="index.php" method="POST">
+                  <fieldset>
+                    <input type="submit" name="mylogout" value="logout">
+                  </fieldset>
+              </form>
+            </div>
+
+            <?php 
+
+            }
+            else
+            {
+
+            ?>
+
+            <div id="navbar" class="navbar-collapse collapse">
+              <form class="navbar-form navbar-right">
+                <a class="btn btn-success" href="login.php">Sign in</a>
+                <a class="btn btn-success" href="registration.php">Create account</a>
+              </form>
+            </div>
+
+            <?php
+
+              }
+
+            ?>
       </div>
     </nav>
 
@@ -92,5 +117,6 @@ session_start();
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
   </body>
 </html>

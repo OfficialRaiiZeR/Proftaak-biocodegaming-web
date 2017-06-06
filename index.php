@@ -3,6 +3,13 @@ session_start();
 
 //var_dump($_SESSION);
 
+
+if (isset($_POST['mylogout'])) 
+{
+  $_SESSION['userlogedin'] = false;
+  header("location:index.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +30,6 @@ session_start();
 
     <link href="css/style.css" rel="stylesheet">
 
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
   </head>
 
   <body>
@@ -44,15 +49,41 @@ session_start();
           ?>
 
         </div>
+        <?php 
+
+	    if ($_SESSION['userlogedin'] == true) 
+	    {
+
+        ?>
+
         <div id="navbar" class="navbar-collapse collapse">
+        	<form action="index.php" method="POST">
+          		<fieldset>
+            		<input type="submit" name="mylogout" value="logout">
+          		</fieldset>
+        	</form>
+        </div>
+
+        <?php 
+
+		}
+		else
+		{
+
+		?>
+
+		<div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
             <a class="btn btn-success" href="login.php">Sign in</a>
             <a class="btn btn-success" href="registration.php">Create account</a>
-            <!-- <?php 
-              require_once("inc/logoutButton.php");
-            ?>-->
           </form>
         </div>
+
+		<?php
+
+    	}
+
+        ?>
       </div>
     </nav>
 
@@ -121,5 +152,6 @@ session_start();
     <script>
 </script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include("inc/Function.php");
 
@@ -7,6 +8,14 @@ $tbl_name="forum_question";
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC"; // OREDER BY id DESC is order result by descending
 
 $result=mysql_query($sql);
+
+
+if (isset($_POST['mylogout'])) 
+{
+  $_SESSION['userlogedin'] = false;
+  header("location:index.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -48,14 +57,42 @@ $result=mysql_query($sql);
           <?php  
             include("Layout/header.html");
           ?>
+          </div>
+          <?php 
 
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <button type="submit" class="btn btn-success" href="login.php">Sign in</button>
-            <button type="submit" class="btn btn-success" href="registration.php">Create account</button>
-          </form>
-        </div>
+            if ($_SESSION['userlogedin'] == true) 
+            {
+
+          ?>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <form action="index.php" method="POST">
+                <fieldset>
+                  <input type="submit" name="mylogout" value="logout">
+                </fieldset>
+            </form>
+          </div>
+
+          <?php 
+
+          }
+          else
+          {
+
+          ?>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right">
+              <a class="btn btn-success" href="login.php">Sign in</a>
+              <a class="btn btn-success" href="registration.php">Create account</a>
+            </form>
+          </div>
+
+          <?php
+
+          }
+
+          ?>
       </div>
     </nav>
 

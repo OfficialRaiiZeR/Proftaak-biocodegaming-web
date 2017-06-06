@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+
+if (isset($_POST['mylogout'])) 
+{
+  $_SESSION['userlogedin'] = false;
+  header("location:index.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
