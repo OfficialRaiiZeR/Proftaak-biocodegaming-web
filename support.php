@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if (isset($_POST['mylogout'])) 
+{
+  $_SESSION['userlogedin'] = false;
+  header("location:index.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,12 +49,44 @@ session_start();
           ?>
 
         </div>
+                <?php 
+
+      if ($_SESSION['userlogedin'] == true) 
+      {
+
+        ?>
+
         <div id="navbar" class="navbar-collapse collapse">
+    <div id="navbar" class="navbar-collapse collapse">
+              <form class="navbar-form navbar-right" action="index.php" method="POST">
+                <fieldset>
+                 <input class="btn btn-logout" type="submit" name="mylogout" value="logout">
+                 <a class="btn btn-logout" href="userProfile.php">Go to profile</a>
+                </fieldset>
+              </form>
+        </div>
+        </div>
+
+        <?php 
+
+    }
+    else
+    {
+
+    ?>
+
+    <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
             <a class="btn btn-success" href="login.php">Sign in</a>
             <a class="btn btn-success" href="registration.php">Create account</a>
           </form>
         </div>
+
+    <?php
+
+      }
+
+    ?>
       </div>
     </nav>
 

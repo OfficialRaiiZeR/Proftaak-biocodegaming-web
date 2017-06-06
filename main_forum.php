@@ -58,41 +58,44 @@ if (isset($_POST['mylogout']))
             include("Layout/header.html");
           ?>
           </div>
-          <?php 
+                 <?php 
 
-            if ($_SESSION['userlogedin'] == true) 
-            {
+      if ($_SESSION['userlogedin'] == true) 
+      {
 
-          ?>
+        ?>
 
-          <div id="navbar" class="navbar-collapse collapse">
-            <form action="index.php" method="POST">
+        <div id="navbar" class="navbar-collapse collapse">
+    <div id="navbar" class="navbar-collapse collapse">
+              <form class="navbar-form navbar-right" action="index.php" method="POST">
                 <fieldset>
-                  <input type="submit" name="mylogout" value="logout">
+                 <input class="btn btn-logout" type="submit" name="mylogout" value="logout">
+                 <a class="btn btn-logout" href="userProfile.php">Go to profile</a>
                 </fieldset>
-            </form>
-          </div>
+              </form>
+        </div>
+        </div>
 
-          <?php 
+        <?php 
 
-          }
-          else
-          {
+    }
+    else
+    {
 
-          ?>
+    ?>
 
-          <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right">
-              <a class="btn btn-success" href="login.php">Sign in</a>
-              <a class="btn btn-success" href="registration.php">Create account</a>
-            </form>
-          </div>
+    <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <a class="btn btn-success" href="login.php">Sign in</a>
+            <a class="btn btn-success" href="registration.php">Create account</a>
+          </form>
+        </div>
 
-          <?php
+    <?php
 
-          }
+      }
 
-          ?>
+    ?>
       </div>
     </nav>
 

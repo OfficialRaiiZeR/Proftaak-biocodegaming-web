@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-//var_dump($_SESSION);
-
-
 if (isset($_POST['mylogout'])) 
 {
   $_SESSION['userlogedin'] = false;
@@ -86,7 +83,7 @@ if (isset($_POST['mylogout']))
 
     	}
 
-        ?>
+    ?>
       </div>
     </nav>
 
