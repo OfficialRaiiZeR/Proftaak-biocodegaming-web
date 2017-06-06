@@ -8,6 +8,17 @@ if (isset($_POST['mylogout']))
   header("location:index.php");
 }
 
+
+  $sql = "SELECT * FROM `login` LIMIT 0, 4 ";
+
+  $resource = mysqli_query($connect, $sql);
+
+  $loginInfo = array();
+  while ($result = mysqli_fetch_assoc($resource)) 
+  {
+    $loginInfo[] = $result;
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +74,7 @@ if (isset($_POST['mylogout']))
               <form class="navbar-form navbar-right" action="index.php" method="POST">
                 <fieldset>
                  <input class="btn btn-logout" type="submit" name="mylogout" value="logout">
-                 <a class="btn btn-logout" href="userProfile.php">Go to profile</a>
+                 <a class="btn btn-logout" href="index.php">Go to main page</a>
                 </fieldset>
               </form>
         </div>
@@ -96,28 +107,24 @@ if (isset($_POST['mylogout']))
     <h1>User profile</h1>
       <div class="row">
         <div class="col-md-4">
-          <h2>buisness contact</h2>
-          <p>if you like to work with us contct us here</p>
-          <p>state: Netherlands</p>
-          <p>Street: Somerenbraaklan 28</p>
-          <p>number: 0614141414</p>
-          <p>Email: buissnessemail@email.com</p>
+
         </div>
         <div class="col-md-4">
-          <h2>buisness contact</h2>
-          <p>if you like to work with us contct us here</p>
-          <p>state: Netherlands</p>
-          <p>Street: Somerenbraaklan 28</p>
-          <p>number: 0614141414</p>
-          <p>Email: buissnessemail@email.com</p>
+        <?php
+
+        foreach ($loginInfo as $login) {
+
+        ?>
+            Name:
+
+            Username:
+
+            Password:
+
+            Email: 
         </div>
         <div class="col-md-4">
-          <h2>buisness contact</h2>
-          <p>if you like to work with us contct us here</p>
-          <p>state: Netherlands</p>
-          <p>Street: Somerenbraaklan 28</p>
-          <p>number: 0614141414</p>
-          <p>Email: buissnessemail@email.com</p>
+
         </div>
       </div>
 

@@ -40,3 +40,9 @@ body::-webkit-scrollbar {
   height: 550px;
   opacity: 0.5;
 }
+
+.btn-logout {
+    color: #fff;
+    background-color: #fa8072;
+    border-color: white;
+}
