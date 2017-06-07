@@ -16,7 +16,7 @@ if (!isset($_SESSION['userlogedin'])) {
 
 if (isset($_POST['mylogin'])) {
   $loginQuery = "SELECT * FROM `login` WHERE `userName` = '". $_POST['username'] . "' AND `userPass` = '" . sha1($_POST['password']) . "'";
-
+$_SESSION['userName'] = $_POST['username'];
   
 
   if ($resource = mysqli_query($connect, $loginQuery))
