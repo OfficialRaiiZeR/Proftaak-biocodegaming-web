@@ -107,3 +107,10 @@ body::-webkit-scrollbar {
     background-color: #fa8072;
     border-color: white;
 }
+
+.btn-login {
+    color: #fff;
+    background-color: #fa8072;
+    border-color: white;
+    width: 227px;
+}

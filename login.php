@@ -132,15 +132,15 @@ if (isset($_POST['mylogout'])) {
                 username
               </label>
               <br>
-              <input type="text" name="username" class="form-control" placeholder="username">
+              <input type="text" name="username" class="form-control" placeholder="username" required="">
               <br>
               <label>
                 password
               </label>
               <br>
-              <input type="password" name="password" placeholder="Password" class="form-control">
+              <input type="password" name="password" placeholder="Password" class="form-control" required="">
               <br>
-              <input type="submit" name="mylogin" value="login">
+              <input class="btn btn-login" type="submit" name="mylogin" value="login">
             </fieldset>
       </form>
     </div>
