@@ -11,17 +11,17 @@ if (mysqli_connect_errno()) {
 
 if (isset($_POST['submit'])) {
 
-  $firstname = $_POST['username'];
-  $firstname = $_POST['firstname'];
-  $insertion = $_POST['insertion'];
-  $lastname = $_POST['lastname'];
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-  $confirmPassword = $_POST['confirmPassword'];
+  $username = mysql_real_escape_string($_POST['username']);
+  $firstname = mysql_real_escape_string($_POST['firstname']);
+  $insertion = mysql_real_escape_string($_POST['insertion']);
+  $lastname = mysql_real_escape_string($_POST['lastname']);
+  $email = mysql_real_escape_string($_POST['email']);
+  $password = mysql_real_escape_string($_POST['password']);
+  $confirmPassword = mysql_real_escape_string($_POST['confirmPassword']);
 }
 
   // !!!deze insert nog aanpasen, het is de oude nog van guestbook. database is namelijk nog niet klaar!!!
-  $insertDataQuery = " INSERT INTO `biocode`.`guests` (`guestbookId`, `firstname`, `insertion`, `surname`, `emailAddress`, `message`, `ipAdddress`, `timefInsert`) VALUES (NULL, '$firstname', '$insertion', '$surname', '$email', '$message', '', CURRENT_DATE())";
+  $insertDataQuery = " INSERT INTO `biocode`.`members` (`memberID`, `username`, `email`, `password`) VALUES (NULL, '$memberID', '$username', 'email', '$password', '', CURRENT_DATE())";
 
     mysqli_query($connect, $insertDataQuery);
 ?>
