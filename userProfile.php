@@ -1,6 +1,21 @@
 <?php
 session_start();
 
+function connectToDB()
+{
+  $host = "localhost"; // naam / locatie database server
+  $user = "root"; // gebruikersnaam om in te loggen op de database server
+  $pass = "usbw"; // wachtwoord usbw voor usb webserver
+  $dB   = "biocode"; // naam van de database
+  
+  $connect = mysqli_connect($host,$user, $pass, $dB);
+  
+  return $connect;
+}
+
+// connectie maken
+$connect = connectToDB();
+$biocode = array();
 
 if (isset($_POST['mylogout'])) 
 {
@@ -8,16 +23,16 @@ if (isset($_POST['mylogout']))
   header("location:index.php");
 }
 
+  $sqlLoginQuery = "SELECT * FROM `login` LIMIT 0, 99 "; // login gegevens
 
-  $sql = "SELECT * FROM `login` LIMIT 0, 4 ";
+  $resource = mysqli_query($connect, $sqlLoginQuery);
 
-  $resource = mysqli_query($connect, $sql);
-
-  $loginInfo = array();
+  $projects = array();
   while ($result = mysqli_fetch_assoc($resource)) 
   {
-    $loginInfo[] = $result;
+    $projects[] = $result;
   }
+
 
 ?>
 <!DOCTYPE html>
@@ -109,20 +124,22 @@ if (isset($_POST['mylogout']))
         <div class="col-md-4">
 
         </div>
+
+        <?php foreach ($biocode as $key => $value) { ?>
         <div class="col-md-4">
-        <?php
-
-        foreach ($loginInfo as $login) {
-
-        ?>
-            Name:
-
-            Username:
-
+            <h1> Name: </h1> <?php echo $value['screenName']; ?>
+            <br>
+            <br>
+           <p> Username:
+            <br>
+            <br>
             Password:
-
-            Email: 
+            <br>
+            <br>
+            Email:
         </div>
+
+        <?php } ?>
         <div class="col-md-4">
 
         </div>
