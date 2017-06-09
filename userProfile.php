@@ -113,7 +113,52 @@ if (isset($_POST['mylogout']))
     <h1>User profile</h1>
       <div class="row">
         <div class="col-md-4">
+          <ul>
+    <div id="info-containertext1">
+    <a onclick=
+        "document.getElementById('info-container').style.display='block';
+         document.getElementById('info-container2').style.display='none';
+         document.getElementById('info-container3').style.display='none';
+         document.getElementById('info-container4').style.display='none';
+        ">
+        <h3>general information</h3>
+      </a>
+      </div>
 
+      <div id="info-containertext2">
+      <a onclick=
+        "document.getElementById('info-container').style.display='none';
+         document.getElementById('info-container2').style.display='block';
+         document.getElementById('info-container3').style.display='none';
+         document.getElementById('info-container4').style.display='none';
+        ">
+        <h3>private information</h3>
+      </a>
+      </div>
+
+      <div id="info-container3text">
+      <a onclick=
+        "document.getElementById('info-container').style.display='none';
+         document.getElementById('info-container2').style.display='none';
+         document.getElementById('info-container3').style.display='block';
+         document.getElementById('info-container4').style.display='none';
+        ">
+        <h3>currency</h3>
+      </a>
+      </div>
+
+      <div id="info-container4text">
+      <a onclick=
+        "document.getElementById('info-container').style.display='none';
+         document.getElementById('info-container2').style.display='none';
+         document.getElementById('info-container3').style.display='none';
+         document.getElementById('info-container4').style.display='block';
+        ">
+        <h3>currency</h3>
+      </a>
+      </div>
+
+    </ul>
         </div>
 
        <?php
@@ -122,13 +167,29 @@ if (isset($_POST['mylogout']))
 
           ?>
         <div class="col-md-4">
-            <p> naam:<b> <?php echo $value['screenName']; ?></b>
+          <div ID="info-container">
+            naam:<b> <?php echo $value['screenName']; ?></b>
             <br>
             <br>
-            <p>Username: <b> <?php echo $value['userName']; ?></b>
+            Username: <b> <?php echo $value['userName']; ?></b>
             <br>
             <br>
             Email: <b> <?php echo $value['Email']; ?></b>
+          </div>
+
+          <div ID="info-container2">
+            change password: <b><input type="changePassword" name="changePassword" placeholder="change Password" class="form-control"></b>
+            <br>
+            <br>
+            confirm password: <b><input type="confimChangePassword" name="confirmChangePassword" placeholder="confirm change Password" class="form-control"></b>
+          </div>
+
+          <div ID="info-container3">
+            current currency: <b> <?php echo $value['Currency']; ?></b>
+            <br>
+            <br>
+            you want more? <b> <?php echo $value['Currency']; ?></b>
+          </div>
         </div>
 
         <?php } ?>
