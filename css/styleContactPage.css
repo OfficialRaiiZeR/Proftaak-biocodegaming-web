@@ -77,3 +77,10 @@ body::-webkit-scrollbar {
     background-color: #fa8072;
     border-color: ;
 }
+
+.InventoryContainer {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
