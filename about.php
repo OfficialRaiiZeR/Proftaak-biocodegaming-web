@@ -105,7 +105,9 @@ if (isset($_POST['mylogout']))
       <hr>
 
       <footer>
-        <p>&copy; 2015 BioCodeGaming, Inc.</p>
+        <?php
+          include("Layout/footer.php");
+        ?>
       </footer>
     </div> <!-- /container -->
 
