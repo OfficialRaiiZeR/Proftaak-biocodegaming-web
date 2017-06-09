@@ -59,16 +59,16 @@ if (isset($_POST['mylogout']))
 	    {
 
         ?>
-        
+
         <div id="navbar" class="navbar-collapse collapse">
-          <div id="navbar" class="navbar-collapse collapse">
+    <div id="navbar" class="navbar-collapse collapse">
               <form class="navbar-form navbar-right" action="index.php" method="POST">
                 <fieldset>
                  <input class="btn btn-logout" type="submit" name="mylogout" value="logout">
                  <a class="btn btn-logout" href="userProfile.php">Go to profile</a>
                 </fieldset>
               </form>
-          </div>
+        </div>
         </div>
 
         <?php 
@@ -141,9 +141,12 @@ if (isset($_POST['mylogout']))
       <hr>
 
       <footer>
-        <?php
-          include("Layout/footer.php");
-        ?>
+        <p>&copy; 2015 - 2017 BioCodeGaming, Inc.
+          <img src="images/icons/twitter bold.png" alt="support" width="50" height="50">
+          <img src="images/icons/facebook bold.png" alt="support" width="50" height="50">
+          <img src="images/icons/instagram bold.png" alt="support" width="50" height="50">
+          <img src="images/icons/youtube bold.png" alt="support" width="50" height="50">
+        </p>
       </footer>
     </div>
 
