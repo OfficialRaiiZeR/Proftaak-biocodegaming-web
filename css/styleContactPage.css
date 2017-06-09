@@ -79,8 +79,21 @@ body::-webkit-scrollbar {
 }
 
 .InventoryContainer {
-    position: absolute;
+    position: relative;
     width: 200px;
     height: 200px;
     background-color: black;
+    opacity: 0.5;
+}
+
+#info-container2 {
+    display: none;
+}
+
+#info-container3 {
+    display: none;
+}
+
+#info-container4 {
+    display: none;
 }
