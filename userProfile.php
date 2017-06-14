@@ -1,13 +1,7 @@
 <?php
+session_start();
 
-  session_start();
-  
-  $host = "localhost"; // naam / locatie database server
-  $user = "root"; // gebruikersnaam om in te loggen op de database server
-  $pass = "usbw"; // wachtwoord usbw voor usb webserver
-  $dB   = "biocode"; // naam van de database
-  
-  $connect = mysqli_connect($host,$user, $pass, $dB);
+include("inc/functions.php");
 
 if (isset($_POST['mylogout'])) 
 {
@@ -62,17 +56,13 @@ if (isset($_POST['mylogout']))
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
           <?php  
           	include("Layout/header.html");
           ?>
-
         </div>
         <?php 
-
-      if ($_SESSION['userlogedin'] == true) 
-      {
-
+	      if ($_SESSION['userlogedin'] == true) 
+	      {
         ?>
 
         <div id="navbar" class="navbar-collapse collapse">
@@ -86,8 +76,7 @@ if (isset($_POST['mylogout']))
         </div>
         </div>
 
-        <?php 
-
+    <?php 
     }
     else
     {
