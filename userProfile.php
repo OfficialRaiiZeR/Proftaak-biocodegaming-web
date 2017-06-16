@@ -18,6 +18,7 @@ if (isset($_POST['mylogout']))
   $sql = "SELECT * FROM `login` WHERE `userName` = '". $_SESSION['userName'] . "' LIMIT 0, 1 ";
 
   $resource = mysqli_query($connect, $sql);
+  $items = mysqli_query($connect, 'SELECT `items`.`name`, `items`.`description`, `items`.`cost` FROM `inventories` INNER JOIN `items` ON `items`.`id` = `inventories`.`item_id` WHERE `inventories`.`user_id` = (SELECT `userId` FROM `login` WHERE `userName` = "' . $_SESSION['userName'] . '");');
 
   $projects = array();
   while ($result = mysqli_fetch_assoc($resource)) 
@@ -192,16 +193,25 @@ if (isset($_POST['mylogout']))
             current currency: <b> <?php echo $value['Currency']; ?></b>
             <br>
             <br>
-            you want more? <b> <?php echo $value['Currency']; ?></b>
+            <br>
+            you want more? 
+            <br>
+            <b><a class="btn btn-Coins" href="buyCoins.php">GET MORE COINS</a></b>
           </div>
         </div>
 
-          <!-- invenory -->
-          <div ID="info-container4">
-            <div class="InventoryContainer"> 
-
-
-            </div>
+          <!-- inventory -->
+         <div ID="info-container4">
+           <div class="InventoryContainer">
+           	<div class="product-title">
+            	<?php while($item = mysqli_fetch_assoc($items)): ?>
+            		<div class="product">
+            			<center><strong><div class="product-title"><?php print($item['name']) ?></div></strong></center>
+            			<div class="product-cover"><img src="covers/<?php print($item['name']) ?>.png" /></div>
+            			<div class="product-price">€<?php print($item['cost']) ?></div>
+            		</div>
+            	<?php endwhile; ?>
+          	</div>
           </div>
         </div>
 
