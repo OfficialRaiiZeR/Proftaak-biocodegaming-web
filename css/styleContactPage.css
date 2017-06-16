@@ -78,12 +78,48 @@ body::-webkit-scrollbar {
     border-color: ;
 }
 
+.btn-Coins {
+    color: #fff;
+    background-color: #070524;
+    border-color: ;
+}
+
 .InventoryContainer {
     position: relative;
-    width: 200px;
-    height: 200px;
+    left: 400px;
+    width: 700px;
+    height: 490px;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.3;
+    border: 5px black;
+}
+
+.product {
+    
+    background-color: red;
+
+    width: 150px;
+    height: 150px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-left: 15x;
+    border: solid black 2px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* the product title */
+.product-title {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    float: top;
+    width: 240px;
+    height: 20px;
+    left: 3px;
+    top: 1px;
 }
 
 #info-container2 {
@@ -97,3 +133,4 @@ body::-webkit-scrollbar {
 #info-container4 {
     display: none;
 }
+

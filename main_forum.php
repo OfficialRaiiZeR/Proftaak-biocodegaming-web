@@ -102,14 +102,16 @@ if (isset($_POST['mylogout']))
     <div class="container">
     
 
-    <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
-      <tr>
-        <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
-        <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
-        <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Views</strong></td>
-        <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Replies</strong></td>
-        <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Date/Time</strong></td>
-      </tr>
+    <table width="90%" border="0" align="center" cellpadding="5" cellspacing="2" bgcolor="#CCCCCC">
+      <div class="ForumTopBar">
+        <tr>
+          <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
+          <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
+          <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Views</strong></td>
+          <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Replies</strong></td>
+          <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Date/Time</strong></td>
+        </tr>
+      </div>
 
       <?php
       // Start looping table row
