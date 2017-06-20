@@ -15,7 +15,7 @@ if (isset($_POST['mylogin']))
 {
 
   $username = mysql_real_escape_string($_POST['username']);
-  $firstname = mysql_real_escape_string($_POST['fullName']);
+  $fullName = mysql_real_escape_string($_POST['fullName']);
   $email = mysql_real_escape_string($_POST['email']);
   $password = mysql_real_escape_string($_POST['password']);
 
