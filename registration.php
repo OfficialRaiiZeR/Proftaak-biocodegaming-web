@@ -117,9 +117,10 @@ if (isset($_POST['mylogin']))
               <input type="password" name="confirmPassword" placeholder="Password" class="form-control">
               <br>
 
-              <input type="submit" name="mylogin" value="login" class="login-button">
+              <input type="submit" name="mylogin" value="Create account" class="login-button">
 
             </fieldset>
+
         </div>
         </form>
           <?php
@@ -127,13 +128,12 @@ if (isset($_POST['mylogin']))
           ?>
       <hr>
 
-      <footer>
+    </div>
+    <footer>
         <?php
           include("Layout/footer.php");
         ?>
-        <p>&copy; 2015 BioCodeGaming, Inc. <img src="images/logo_biocodegaming.png" alt="album title goes here" width="50" height="50"> </p>
       </footer>
-    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>

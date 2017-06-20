@@ -84,8 +84,6 @@ body::-webkit-scrollbar {
     border-color: ;
 }
 
-
-
 .InventoryContainer {
     position: relative;
     left: 200px;
@@ -95,6 +93,10 @@ body::-webkit-scrollbar {
     opacity: 0.7;
     border: solid black 2px;
     overflow: auto;
+}
+
+#InventoryContainer::-webkit-scrollbar {
+    display: none;
 }
 
 .inventory-items {
