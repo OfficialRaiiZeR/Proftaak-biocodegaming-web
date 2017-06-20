@@ -192,15 +192,13 @@ if (isset($_POST['mylogout']))
           <!-- inventory -->
          <div ID="info-container4">
            <div class="InventoryContainer">
-           	<div class="product-title">
-            	<?php while($item = mysqli_fetch_assoc($items)): ?>
-            		<div class="product">
-            			<center><strong><div class="product-title"><?php print($item['name']) ?></div></strong></center>
-            			<div class="product-cover"><img src="covers/<?php print($item['name']) ?>.png" /></div>
-            			<div class="product-price">€<?php print($item['cost']) ?></div>
-            		</div>
-            	<?php endwhile; ?>
-          	</div>
+            <?php while($item = mysqli_fetch_assoc($items)): ?>
+            	<div class="inventory-items">
+            		<center><strong><div class="product-title"><?php print($item['name']) ?></div></strong></center>
+            		<div class="item-cover"><center><img src="images/inventory/<?php print($item['name']) ?>.png" /></center></div>
+            		<div class="item-price">€<?php print($item['cost']) ?></div>
+            	</div>		
+            <?php endwhile; ?>
           </div>
         </div>
 
