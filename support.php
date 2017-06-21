@@ -127,27 +127,27 @@ if (isset($_POST['mylogout']))
           <div id="ContactTitle">Contact</div>
           <li>
             <label>Firstname:</label>
-            <input type="text" name="firstName" value="">
+            <input type="text" class="form-control" name="firstName" value="">
           </li>
           <li>
             <label>Insertion:</label>
-            <input type="text" name="insertion" value="">
+            <input type="text" class="form-control" name="insertion" value="">
           </li>
           <li>
             <label>Lastname:</label>
-            <input type="text" name="lastName" value="">
+            <input type="text" class="form-control" name="lastName" value="">
           </li>
           <li>
             <label>Email address:</label>
-            <input type="email" name="email" value="">
+            <input type="email" class="form-control" name="email" value="">
           </li>
           <li>
             <label>Explain Your problem:</label>
-            <textarea id="messageBox" type="text" name="Message" value=""></textarea>
+            <textarea id="messageBox" class="form-control" type="text" name="Message" value=""></textarea>
           </li>
           <li>
             <div id="submitButton">
-              <input type="submit" name="submit" value="Send">
+              <input type="submit" class="btn btn-success" name="submit" value="Send">
             </div>
           </li>
         </ul>

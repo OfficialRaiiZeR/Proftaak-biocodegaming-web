@@ -185,7 +185,7 @@ if (isset($_POST['mylogout']))
             <br>
             you want more? 
             <br>
-            <b><a class="btn btn-Coins" href="buyCoins.php">GET MORE COINS</a></b>
+            <b><a class="btn btn-Coins" href="addCurrency.php">GET MORE COINS</a></b>
           </div>
         </div>
 
