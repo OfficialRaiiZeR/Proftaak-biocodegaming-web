@@ -34,7 +34,7 @@ if (isset($_POST['mylogout']))
 
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleForumPage.css" rel="stylesheet">
 
     <script src="js/ie-emulation-modes-warning.js"></script>
   </head>
@@ -103,13 +103,16 @@ if (isset($_POST['mylogout']))
     
 
     <table width="90%" border="0" align="center" cellpadding="5" cellspacing="2" bgcolor="#CCCCCC">
+      <tr>
+        <td class="btn btn-forum" colspan="5" align="right" bgcolor="#E6E6E6"><a href="create_topic.php"><strong>Create New Topic</strong> </a></td>
+      </tr>
       <div class="ForumTopBar">
         <tr>
-          <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
-          <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
-          <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Views</strong></td>
-          <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Replies</strong></td>
-          <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Date/Time</strong></td>
+          <td class="forumBars" width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
+          <td class="forumBars" width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
+          <td class="forumBars" width="15%" align="center" bgcolor="#E6E6E6"><strong>Views</strong></td>
+          <td class="forumBars" width="13%" align="center" bgcolor="#E6E6E6"><strong>Replies</strong></td>
+          <td class="forumBars" width="13%" align="center" bgcolor="#E6E6E6"><strong>Date/Time</strong></td>
         </tr>
       </div>
 
@@ -118,11 +121,11 @@ if (isset($_POST['mylogout']))
       while($rows=mysql_fetch_array($result)){
       ?>
       <tr>
-        <td bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
-        <td bgcolor="#FFFFFF"><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['topic']; ?></a><BR></td>
-        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['view']; ?></td>
-        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['reply']; ?></td>
-        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['datetime']; ?></td>
+        <td class="forumComments" align="center" bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
+        <td class="forumComments" align="center" bgcolor="#FFFFFF"><b><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['topic']; ?></a></b><BR></td>
+        <td class="forumComments" align="center" bgcolor="#FFFFFF"><?php echo $rows['view']; ?></td>
+        <td class="forumComments" align="center" bgcolor="#FFFFFF"><?php echo $rows['reply']; ?></td>
+        <td class="forumComments" align="center" bgcolor="#FFFFFF"><?php echo $rows['datetime']; ?></td>
       </tr>
 
       <?php
@@ -132,9 +135,6 @@ if (isset($_POST['mylogout']))
       mysql_close();
       ?>
 
-      <tr>
-        <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="create_topic.php"><strong>Create New Topic</strong> </a></td>
-      </tr>
     </table>
 
     </div>

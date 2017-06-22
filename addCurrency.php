@@ -1,7 +1,23 @@
 <?php
 session_start();
-
 include("inc/functions.php");
+
+if (mysqli_connect_errno()) 
+{
+  printf("connection failed: %\n", mysql_connect_error());
+  exit();
+}
+
+if(isset($_GET['item_id'])) {
+  $item_id = mysql_real_escape_string($_GET['item_id']);
+  $insertDataQuery = "INSERT INTO `biocode`.`inventories` (`user_id`, `item_id`) VALUES (" . $_SESSION['id'] . ", " . $item_id . ");";
+
+  mysqli_query($connect, $insertDataQuery);
+  header('Location: userProfile.php');
+
+  exit();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -23,9 +39,8 @@ include("inc/functions.php");
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+<body>
     <script>document.body.className += ' fade-out';</script>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -35,49 +50,69 @@ include("inc/functions.php");
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+
           <?php  
             include("Layout/header.html");
           ?>
+
         </div>
+        <?php 
+
+      if ($_SESSION['userlogedin'] == true) 
+      {
+
+        ?>
+        
         <div id="navbar" class="navbar-collapse collapse">
+          <div id="navbar" class="navbar-collapse collapse">
+              <form class="navbar-form navbar-right" action="index.php" method="POST">
+                <fieldset>
+                 <input class="btn btn-logout" type="submit" name="mylogout" value="logout">
+                 <a class="btn btn-logout" href="userProfile.php">Go to profile</a>
+                </fieldset>
+              </form>
+          </div>
+        </div>
+
+        <?php 
+
+    }
+    else
+    {
+
+    ?>
+
+    <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
             <a class="btn btn-success" href="login.php">Sign in</a>
             <a class="btn btn-success" href="registration.php">Create account</a>
           </form>
         </div>
+
+    <?php
+
+      }
+
+    ?>
       </div>
     </nav>
-
-      </div>
-    </nav>
-
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Welcome to biocodegaming</h1>
-        <p class="maintext">This is BioCodeGaming, the Number 1 platfrom for all your community stuff and gaming servers. We also have a installable application from this website where you will have the same functionality</p>
-        <p><a class="btn btn-primary btn-lg" href="application.php" role="button">Learn more &raquo;</a></p>
-      </div>
-    </div>
 
     <div class="container">
-      <h1>Latest news and releases</h1>
+      <h1>add your desired currency</h1>
       <div class="row">
         <div class="col-md-4">
-          <h2>5$ BioCoins</h2>
-          <p> </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2><center>5$ BioCoins</center></h2>
+          <p><center><a class="btn btn-logout" href="addCurrency.php?item_id=6">Add currency to your account</a></center></p>
         </div>
         <div class="col-md-4">
-          <h2>10$ BioCoins</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>15$ BioCoins</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2><center>10$ BioCoins</center></h2>
+          <p><center><a class="btn btn-logout" href="addCurrency.php?item_id=1">Add currency to your account</a></center></p>
         </div>
-        <p><a class="btn2" href="#" role="button">Older news &raquo;</a></p>
+        <div class="col-md-4">
+          <h2><center>15$ BioCoins</center></h2>
+          <p><center><a class="btn btn-logout" href="addCurrency.php?item_id=7">Add currency to your account</a></center></p>
+        </div>
+
       </div>
 
       <hr>

@@ -115,4 +115,11 @@ body::-webkit-scrollbar {
     width: 227px;
 }
 
-
+.btn-forum {
+        color: white;
+    background-color: #17113E;
+    border-color: white;
+    width: 227px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

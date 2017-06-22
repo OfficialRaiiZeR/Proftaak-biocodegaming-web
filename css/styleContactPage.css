@@ -87,7 +87,7 @@ body::-webkit-scrollbar {
 .InventoryContainer {
     position: relative;
     left: 200px;
-    width: 670px;
+    width: 680px;
     height: 490px;
     background-color: ;
     opacity: 0.7;
@@ -95,7 +95,7 @@ body::-webkit-scrollbar {
     overflow: auto;
 }
 
-#InventoryContainer::-webkit-scrollbar {
+.InventoryContainer::-webkit-scrollbar {
     display: none;
 }
 

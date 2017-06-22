@@ -24,7 +24,7 @@ if (isset($_POST['mylogout']))
 
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleForumpage.css" rel="stylesheet">
 
     <script src="js/ie-emulation-modes-warning.js"></script>
   </head>
@@ -101,29 +101,29 @@ if (isset($_POST['mylogout']))
 								<td colspan="3" bgcolor="#E6E6E6"><strong>Create New Topic</strong> </td>
 							</tr>
 							<tr>
-								<td width="14%"><strong>Topic</strong></td>
+								<td width="14%"><strong class="forumCreateNames">Topic</strong></td>
 								<td width="2%">:</td>
-								<td width="84%"><input name="topic" type="text" id="topic" size="50" /></td>
+								<td width="84%"><input class="form-control" name="topic" type="text" id="topic" size="50" /></td>
 							</tr>
 							<tr>
-								<td valign="top"><strong>Detail</strong></td>
+								<td valign="top"><strong class="forumCreateNames">Detail</strong></td>
 								<td valign="top">:</td>
-								<td><textarea name="detail" cols="50" rows="3" id="detail"></textarea></td>
+								<td><textarea class="form-control" name="detail" cols="50" rows="3" id="detail"></textarea></td>
 							</tr>
 							<tr>
-								<td><strong>Name</strong></td>
+								<td><strong class="forumCreateNames">Name</strong></td>
 								<td>:</td>
-								<td><input name="name" type="text" id="name" size="50" /></td>
+								<td><input class="form-control" name="name" type="text" id="name" size="50" /></td>
 							</tr>
 							<tr>
-								<td><strong>Email</strong></td>
+								<td><strong class="forumCreateNames">Email</strong></td>
 								<td>:</td>
-								<td><input name="email" type="text" id="email" size="50" /></td>
+								<td><input class="form-control" name="email" type="text" id="email" size="50" /></td>
 							</tr>
 							<tr>
 								<td>&nbsp;</td>
 								<td>&nbsp;</td>
-								<td><input type="submit" name="Submit" value="Submit" /> <input type="reset" name="Submit2" value="Reset" /></td>
+								<td><input class="btn btn-forum" type="submit" name="Submit" value="Submit" /> <input class="btn btn-logout" type="reset" name="Submit2" value="Reset" /></td>
 							</tr>
 						</table>
 					</td>

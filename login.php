@@ -26,6 +26,7 @@ $_SESSION['userName'] = $_POST['username'];
     if($rowcount > 0)
     {
       $_SESSION['userlogedin'] = true;
+      $_SESSION['id'] = $user['userId'];
       header("location:index.php");
     }
     else

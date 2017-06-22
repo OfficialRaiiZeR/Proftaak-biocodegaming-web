@@ -1,0 +1,184 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  opacity: 1;
+  transition: 1s opacity;
+  background-image: url('../images/biocode logo black dirty.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.jumbotron {
+	background-image: url('../images/pattern-wallpaper-17.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.jumbotronAppPage {
+	background-image: url('../images/pattern-wallpaper-17.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+	height: 100vh;
+}
+
+.navbar-brand {
+	transition: 0.2s ease;
+}
+
+.navbar-brand:hover {
+	transform: scale(1.1, 1.1);
+}
+
+.maintext {
+	color: white;
+}
+
+.btn {
+	transition: 0.2s ease;
+}
+
+.btn2 {
+	transition: 0.2s ease;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.login-button {
+    transition: 0.2s ease;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.btn-logout {
+    color: #fff;
+    background-color: #fa8072;
+    border-color: ;
+}
+
+.btn-login {
+    color: #fff;
+    background-color: #fa8072;
+    border-color: white;
+    width: 227px;
+}
+
+.btn-forum {
+        color: white;
+    background-color: #17113E;
+    border-color: white;
+    width: 227px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ForumTopBar {
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.forumBars {
+    color: orange;
+    background-color: black;
+    opacity: 0.8;
+    height: 50px;
+    border-bottom: solid white 2px;
+}
+
+.forumComments {
+    color: white;
+    background-color: #565656;
+    opacity: 0.7;
+    height: 75px;
+    border-bottom: solid white 2px;
+    background-blend-mode: color-dodge;
+    font-size: 125%;
+}
+
+.forumCreateNames {
+    color: white;
+}
+
+.forumAnswers {
+    color: white;
+    background-color: #565656;
+    opacity: 0.7;
+    height: 50px;
+    border-bottom: solid white 2px;
+    background-blend-mode: color-dodge;
+}
+
+.forumAnswersText {
+    color: white;
+    background-color: #565656;
+    opacity: 0.7;
+    height: 100px;
+    border-bottom: solid white 2px;
+    background-blend-mode: color-dodge;
+}
+
+.forumAnswersDate {
+    color: white;
+    background-color: #565656;
+    opacity: 0.7;
+    height: 50px;
+    border-bottom: solid white 2px;
+    background-blend-mode: color-dodge;
+    font-size: 75%
+}

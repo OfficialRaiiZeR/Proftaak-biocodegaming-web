@@ -182,10 +182,9 @@ if (isset($_POST['mylogout']))
             current currency: <b> <?php echo $value['Currency']; ?></b>
             <br>
             <br>
+            <br> 
             <br>
-            you want more? 
-            <br>
-            <b><a class="btn btn-Coins" href="addCurrency.php">GET MORE COINS</a></b>
+            <b><center><a class="btn btn-Coins" href="addCurrency.php">>>>GET MORE COINS<<<</a></center></b>
           </div>
         </div>
 
