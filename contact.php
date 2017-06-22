@@ -96,7 +96,7 @@ if (isset($_POST['mylogout']))
     <h1>Latest news and releases</h1>
       <div class="row">
         <div class="col-md-4">
-          <h2>buisness contact</h2>
+          <h2>Business contact</h2>
           <p>if you like to work with us contct us here</p>
           <p>state: Netherlands</p>
           <p>Street: Somerenbraaklan 28</p>
@@ -104,7 +104,7 @@ if (isset($_POST['mylogout']))
           <p>Email: buissnessemail@email.com</p>
         </div>
         <div class="col-md-4">
-          <h2>buisness contact</h2>
+          <h2>Business contact</h2>
           <p>if you like to work with us contct us here</p>
           <p>state: Netherlands</p>
           <p>Street: Somerenbraaklan 28</p>
@@ -112,7 +112,7 @@ if (isset($_POST['mylogout']))
           <p>Email: buissnessemail@email.com</p>
         </div>
         <div class="col-md-4">
-          <h2>buisness contact</h2>
+          <h2>Business contact</h2>
           <p>if you like to work with us contct us here</p>
           <p>state: Netherlands</p>
           <p>Street: Somerenbraaklan 28</p>
