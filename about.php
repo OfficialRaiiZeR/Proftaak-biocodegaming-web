@@ -97,7 +97,8 @@ if (isset($_POST['mylogout']))
         
           <div class="infobox">
              <h3 class="maintext">We are biocodegaming, a community host original from steam. we desided to make a website because we saw how fun it can be to have an active and growing community, and we liked to see some changes in this system.
-
+              <br />
+              <br />
              so we decided to grow bigger, and we did this with an awesome looking website and some additional servers beside of it for everyone to chat like ts3 and discord.
              </h3>
           </div>
