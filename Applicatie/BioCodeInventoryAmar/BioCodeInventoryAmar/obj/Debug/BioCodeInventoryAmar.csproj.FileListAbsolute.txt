@@ -1,0 +1,10 @@
+D:\school\Applicatie programering\BioCodeInventoryAmar\BioCodeInventoryAmar\bin\Debug\BioCodeInventoryAmar.exe.config
+D:\school\Applicatie programering\BioCodeInventoryAmar\BioCodeInventoryAmar\bin\Debug\BioCodeInventoryAmar.exe
+D:\school\Applicatie programering\BioCodeInventoryAmar\BioCodeInventoryAmar\bin\Debug\BioCodeInventoryAmar.pdb
+D:\school\Applicatie programering\BioCodeInventoryAmar\BioCodeInventoryAmar\obj\Debug\BioCodeInventoryAmar.csprojResolveAssemblyReference.cache
+D:\school\Applicatie programering\BioCodeInventoryAmar\BioCodeInventoryAmar\obj\Debug\BioCodeInventoryAmar.Form1.resources
+D:\school\Applicatie programering\BioCodeInventoryAmar\BioCodeInventoryAmar\obj\Debug\BioCodeInventoryAmar.Properties.Resources.resources
+D:\school\Applicatie programering\BioCodeInventoryAmar\BioCodeInventoryAmar\obj\Debug\BioCodeInventoryAmar.csproj.GenerateResource.Cache
+D:\school\Applicatie programering\BioCodeInventoryAmar\BioCodeInventoryAmar\obj\Debug\BioCodeInventoryAmar.exe
+D:\school\Applicatie programering\BioCodeInventoryAmar\BioCodeInventoryAmar\obj\Debug\BioCodeInventoryAmar.pdb
+D:\school\Applicatie programering\BioCodeInventoryAmar\BioCodeInventoryAmar\obj\Debug\BioCodeInventoryAmar.Form2.resources

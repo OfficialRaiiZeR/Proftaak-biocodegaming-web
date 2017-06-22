@@ -1,6 +1,0 @@
-C:\Users\alexm\Downloads\Source\CommandServer\CommandServer\bin\Debug\CommandServer.XML
-C:\Users\alexm\Downloads\Source\CommandServer\CommandServer\bin\Debug\CommandServer.dll
-C:\Users\alexm\Downloads\Source\CommandServer\CommandServer\bin\Debug\CommandServer.pdb
-C:\Users\alexm\Downloads\Source\CommandServer\CommandServer\obj\Debug\CommandServer.csprojResolveAssemblyReference.cache
-C:\Users\alexm\Downloads\Source\CommandServer\CommandServer\obj\Debug\CommandServer.dll
-C:\Users\alexm\Downloads\Source\CommandServer\CommandServer\obj\Debug\CommandServer.pdb
