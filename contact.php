@@ -59,14 +59,14 @@ if (isset($_POST['mylogout']))
         ?>
 
         <div id="navbar" class="navbar-collapse collapse">
-    <div id="navbar" class="navbar-collapse collapse">
+          <div id="navbar" class="navbar-collapse collapse">
               <form class="navbar-form navbar-right" action="index.php" method="POST">
                 <fieldset>
                  <input class="btn btn-logout" type="submit" name="mylogout" value="logout">
                  <a class="btn btn-logout" href="userProfile.php">Go to profile</a>
                 </fieldset>
               </form>
-        </div>
+          </div>
         </div>
 
         <?php 

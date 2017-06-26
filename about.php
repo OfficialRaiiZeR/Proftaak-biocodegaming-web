@@ -14,17 +14,15 @@ if (isset($_POST['mylogout']))
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>www.biocodegaming.com</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- CSS for boostrap(standard style) -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- IE10 viewport Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -57,14 +55,14 @@ if (isset($_POST['mylogout']))
         ?>
 
         <div id="navbar" class="navbar-collapse collapse">
-    <div id="navbar" class="navbar-collapse collapse">
+          <div id="navbar" class="navbar-collapse collapse">
               <form class="navbar-form navbar-right" action="index.php" method="POST">
                 <fieldset>
                  <input class="btn btn-logout" type="submit" name="mylogout" value="logout">
                  <a class="btn btn-logout" href="userProfile.php">Go to profile</a>
                 </fieldset>
               </form>
-        </div>
+          </div>
         </div>
 
         <?php 
@@ -76,18 +74,18 @@ if (isset($_POST['mylogout']))
     ?>
 
     <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <a class="btn btn-success" href="login.php">Sign in</a>
-            <a class="btn btn-success" href="registration.php">Create account</a>
-          </form>
-        </div>
+      <form class="navbar-form navbar-right">
+        <a class="btn btn-success" href="login.php">Sign in</a>
+        <a class="btn btn-success" href="registration.php">Create account</a>
+      </form>
+    </div>
 
     <?php
 
       }
 
     ?>
-      </div>
+    -</div>
     </nav>
 
     <div class="jumbotron">
@@ -112,7 +110,8 @@ if (isset($_POST['mylogout']))
           include("Layout/footer.php");
         ?>
       </footer>
-    </div> <!-- /container -->
+    </div>
+     <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
